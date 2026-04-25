@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Watch Party App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <div>
+    <div class="card">
+      <h1>📹 Video Call Room</h1>
+      <button id="callBtn" onclick="toggleCall()">Join Call</button>
+
+      <div class="video-grid">
+        <div class="video-box your-camera">Your Camera</div>
+        <div class="video-box friend-camera">Friend Camera</div>
+      </div>
+    </div>
+
+    <div class="card movie-card">
+      <h2>🎬 Watch Movie Together</h2>
+
+      <div class="movie-controls">
+        <input type="text" id="movieUrl" placeholder="Paste movie/video URL">
+        <button onclick="syncVideo()">Sync Video</button>
+      </div>
+
+      <video id="moviePlayer" controls>
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>💬 Live Chat</h2>
+
+    <div class="chat-box" id="chatBox">
+      <div class="message">
+        <strong>Alex</strong>
+        Welcome to the watch party 🎉
+      </div>
+    </div>
+
+    <div class="chat-input">
+      <input type="text" id="messageInput" placeholder="Type a message...">
+      <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <p><strong>2 participants online</strong></p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
